@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio Website Design</title>
+    <title>Abrar Hasnat Raiyan Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!----Font awesome cdn  font icon css -->
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
+    <!-- Hero Section -->
     <div class="hero-header">
         <div class="wrapper">
             <header>
@@ -26,11 +27,10 @@
                         <span></span>
                     </div>
                     <ul class="navlinks">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Resume</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -41,11 +41,9 @@
                 <div class="hero-text">
                     <h5>Hi I'm <span class="input">Cyber Security Analyst</span></h5>
                     <h1>Abrar Raiyan</h1>
-                    <p> I'm a passionate and detail-oriented developer with a strong foundation in computer science and
-                        a keen interest in building modern, user-friendly web experiences. With experience in frontend
-                        technologies and a constant drive to learn, I enjoy turning ideas into interactive, responsive
-                        designs that make an impact.
-                    </p>
+                    <p>
+                        I'm an IT professional and frontend developer with experience in IT support and web development. Currently at James Cook University, I provide Level 2 support for desktops, networks, AV systems, and teaching spaces. 
+                        Previously, I developed web platforms with ReactJS, TypeScript, and Google Cloud at Sample Assist and delivered IT support at Land & Lease Realty. I enjoy solving technical problems and building user-friendly solutions.
                     </p>
 
                     <div class="btn-group">
@@ -66,31 +64,83 @@
                         <a href="https://leetcode.com/u/Abrus18/" target="_blank">
                             <img src="images/leetcode.svg" alt="LeetCode" class="social-icon" />
                         </a>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!---typed js for typing text effect-->
+
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="wrapper">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <img src="images/project1.png" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Hang Gesture Recognition</h3>
+                        <p>A Python project using Mediapipe and Pygame to recognize hand gestures.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Abruz18/Hand_gesture_recognition" target="_blank">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fa-solid fa-eye"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <img src="images/project2.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>My personal portfolio website built with HTML, CSS, and JavaScript.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Abruz18/portfolio" target="_blank">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fa-solid fa-eye"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="wrapper">
+            <h2 class="section-title">Contact Me</h2>
+            <p style="text-align:center;">You can reach me at <a href="mailto:abhasnat49@gmail.com">abhasnat49@gmail.com</a> or through my social media links above.</p>
+        </div>
+    </section>
+
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script>
-        /** creating button click show hide navbar **/
+        // Navbar toggle
         var togglebtn = document.querySelector(".togglebtn");
         var nav = document.querySelector(".navlinks");
-        var links = document.querySelector(".navlinks li");
 
         togglebtn.addEventListener("click", function () {
             this.classList.toggle("click");
             nav.classList.toggle("open");
-        })
+        });
 
+        // Typed.js animation
         var typed = new Typed(".input", {
             strings: ["Frontend Developer", " IT Support", "Web Developer"],
-            typedSpeed: 70,
-            backSpeed: 55,
+            typeSpeed: 120,
+            backSpeed: 80,
+            backDelay: 1500,
             loop: true
-        })
+        });
     </script>
 </body>
 

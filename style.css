@@ -1,20 +1,18 @@
+/* =========================
+   General Styles
+========================= */
 * {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
-    font-family: poppins, sans-serif;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
 
 body {
     overflow-x: hidden;
-}
-
-.hero-header {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    background: #222;
+    background-color: #111;
+    color: #e5e5e5;
 }
 
 .wrapper {
@@ -24,6 +22,9 @@ body {
     padding: 0 20px;
 }
 
+/* =========================
+   Header / Navbar
+========================= */
 header {
     padding: 40px 0 30px;
     display: flex;
@@ -50,7 +51,6 @@ header {
     margin-right: 5px;
     cursor: pointer;
     text-align: center;
-
 }
 
 .logo .logo-text {
@@ -78,7 +78,6 @@ nav .togglebtn span {
     height: 3px;
     transition: 0.3s;
     transition-property: transform, opacity;
-
 }
 
 nav .navlinks {
@@ -92,6 +91,21 @@ nav .navlinks li {
 nav .navlinks li a {
     color: #e5e5e5;
     margin-right: 2.5rem;
+    transition: color 0.3s;
+}
+
+nav .navlinks li a:hover {
+    color: #007ced;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero-header {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #111;
 }
 
 .container {
@@ -111,8 +125,9 @@ nav .navlinks li a {
 }
 
 .hero-pic img {
-    height: 100%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: 0.5s;
 }
 
@@ -139,15 +154,16 @@ nav .navlinks li a {
 .hero-text h1 {
     color: #007ced;
     font-size: 3rem;
+    margin: 10px 0;
 }
 
 .hero-text p {
     color: #e5e5e5;
-
+    line-height: 1.6;
 }
 
 .btn-group {
-    margin: 45px 0;
+    margin: 30px 0;
 }
 
 .btn-group .btn {
@@ -160,10 +176,12 @@ nav .navlinks li a {
     border-radius: 30px;
     border: 2px solid #e5e5e5;
     box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    transition: 0.3s;
 }
 
-.btn.active {
+.btn.active, .btn:hover {
     border-color: #007ced;
+    background-color: #007ced;
 }
 
 .hero-text .social i {
@@ -178,20 +196,146 @@ nav .navlinks li a {
     transform: rotate(360deg);
 }
 
-/* Respnosiv design & displaying navbar for small screen */
+.social-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    filter: invert(100%);
+    transition: 0.5s;
+}
+
+.social-icon:hover {
+    filter: invert(42%) sepia(86%) saturate(2839%) hue-rotate(196deg) brightness(95%) contrast(94%);
+    transform: rotate(360deg);
+}
+
+/* =========================
+   About Me / Profile
+========================= */
+.profile {
+    padding: 80px 0;
+    background-color: #333;
+    text-align: center;
+}
+
+.profile .section-title {
+    font-size: 2.5rem;
+    color: #007ced;
+    margin-bottom: 30px;
+}
+
+.profile p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* =========================
+   Projects Section
+========================= */
+.projects {
+    padding: 80px 0;
+    background-color: #111;
+}
+
+.projects .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #007ced;
+    margin-bottom: 50px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.7);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: #007ced;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px;
+    padding: 6px 12px;
+    background: #007ced;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.project-links a:hover {
+    background: #005bb5;
+}
+
+.project-links i {
+    font-size: 14px;
+}
+
+/* =========================
+   Contact Section
+========================= */
+.contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact .section-title {
+    font-size: 2.5rem;
+    color: #007ced;
+    margin-bottom: 30px;
+}
+
+.contact a {
+    color: #007ced;
+    text-decoration: underline;
+}
+
+.contact a:hover {
+    color: #005bb5;
+}
+
+/* =========================
+   Responsive Design
+========================= */
 @media(max-width:930px) {
     nav .togglebtn {
         display: initial;
-    }
-
-    /* for toggle button**/
-    .click {
-        top: 45px;
-    }
-
-    .click span {
-        position: absolute;
-        margin-top: 12px
     }
 
     .click span:first-child {
@@ -200,7 +344,6 @@ nav .navlinks li a {
 
     .click span:nth-child(2) {
         opacity: 0;
-        margin: 0;
     }
 
     .click span:last-child {
@@ -215,7 +358,7 @@ nav .navlinks li a {
         bottom: 0;
         width: 60%;
         height: 100vh;
-        background-color: #222;
+        background-color: #111;
         z-index: 3;
         box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
         transition: 0.5s;
@@ -240,23 +383,10 @@ nav .navlinks li a {
 @media(max-width:768px) {
     .container {
         flex-direction: column;
-        padding-top: 2rem
+        padding-top: 2rem;
     }
 
     .hero-text {
         padding: 40px 0px;
     }
-}
-
-.social-icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    filter: invert(100%);
-    transition: 0.5s;
-}
-
-.social-icon:hover {
-    filter: invert(42%) sepia(86%) saturate(2839%) hue-rotate(196deg) brightness(95%) contrast(94%);
-    transform: rotate(360deg);
 }
