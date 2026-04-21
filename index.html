@@ -1,147 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abrar Hasnat Raiyan Portfolio</title>
+    <title>Abrar Hasnat Raiyan | Cyber Security</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
-
 <body>
-    <!-- Hero Section -->
-    <div class="hero-header">
-        <div class="wrapper">
-            <header>
-                <div class="logo">
-                    <i class="fa-solid fa-a"></i>
-                    <div class="logo-text">Abrar Hasnat Raiyan</div>
+
+<!-- Animated grid background -->
+<div class="bg-grid"></div>
+<div class="scan-line"></div>
+
+<!-- Particle canvas -->
+<canvas id="particles"></canvas>
+
+<!-- Hero Section -->
+<div class="hero-header" id="home">
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" stroke="#1a8fff" stroke-width="1.5" fill="none"/>
+                        <polygon points="20,8 32,15 32,25 20,32 8,25 8,15" stroke="#1a8fff" stroke-width="0.8" fill="rgba(26,143,255,0.05)"/>
+                        <text x="12" y="25" fill="#1a8fff" font-size="14" font-family="Share Tech Mono" font-weight="bold">AR</text>
+                    </svg>
                 </div>
-                <nav>
-                    <div class="togglebtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#about">About Me</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="container">
+                <div class="logo-text">Abrar<span>.</span>sec</div>
+            </div>
+            <nav>
+                <div class="togglebtn">
+                    <span></span><span></span><span></span>
+                </div>
+                <ul class="navlinks">
+                    <li><a href="#home"><span class="nav-bracket">[</span>Home<span class="nav-bracket">]</span></a></li>
+                    <li><a href="#projects"><span class="nav-bracket">[</span>Labs<span class="nav-bracket">]</span></a></li>
+                    <li><a href="#about"><span class="nav-bracket">[</span>About<span class="nav-bracket">]</span></a></li>
+                    <li><a href="#contact"><span class="nav-bracket">[</span>Contact<span class="nav-bracket">]</span></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="hero-pic-wrapper">
+                <div class="hex-ring ring-1"></div>
+                <div class="hex-ring ring-2"></div>
+                <div class="hex-ring ring-3"></div>
                 <div class="hero-pic">
-                    <img src="images/image.jpg" alt="profile pic">
+                    <img src="images/image.jpg" alt="Abrar Raiyan">
                 </div>
-                <div class="hero-text">
-                    <h5>Hi I'm <span class="input">Cyber Security Analyst</span></h5>
-                    <h1>Abrar Raiyan</h1>
-                    <p>
-                        I'm an IT professional and frontend developer with experience in IT support and web development. Currently at James Cook University, I provide Level 2 support for desktops, networks, AV systems, and teaching spaces. 
-                        Previously, I developed web platforms with ReactJS, TypeScript, and Google Cloud at Sample Assist and delivered IT support at Land & Lease Realty. I enjoy solving technical problems and building user-friendly solutions.
-                    </p>
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span>AVAILABLE FOR HIRE</span>
+                </div>
+            </div>
 
-                    <div class="btn-group">
-                        <a href="files/Resume(1).pdf" class="btn active">Download CV</a>
-                        <a href="mailto:abhasnat49@gmail.com" class="btn">Contact</a>
+            <div class="hero-text">
+                <div class="terminal-label">
+                    <span class="terminal-prompt">root@soc:~$</span>
+                    <span class="terminal-cmd"> whoami</span>
+                </div>
+                <h5>Hi I'm a <span class="input"></span><span class="cursor-blink">|</span></h5>
+                <h1>Abrar<br><span class="surname">Raiyan</span></h1>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-val">2+</div>
+                        <div class="stat-label">Yrs IT Exp</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-val">2</div>
+                        <div class="stat-label">Cyber Labs</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-val">∞</div>
+                        <div class="stat-label">Curiosity</div>
+                    </div>
+                </div>
+
+                <p class="hero-desc">
+                    IT professional transitioning into <span class="highlight">Cyber Security</span>. 
+                    Currently providing IT Support at <span class="highlight">Netflix Animation Studios</span> while building hands-on 
+                    experience through <span class="highlight">honeypot deployments</span>, 
+                    <span class="highlight">SIEM monitoring</span>, and real-world attack simulations.
+                </p>
+
+                <div class="btn-group">
+                    <a href="files/Resume(1).pdf" class="btn active">
+                        <i class="fa-solid fa-shield-halved"></i> Download CV
+                    </a>
+                    <a href="mailto:abhasnat49@gmail.com" class="btn">
+                        <i class="fa-solid fa-terminal"></i> Contact
+                    </a>
+                </div>
+
+                <div class="social">
+                    <a href="https://www.facebook.com/abrar.hanat" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abrars18/" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Abruz18" target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/Abrus18/" target="_blank" aria-label="LeetCode">
+                        <img src="images/leetcode.svg" alt="LeetCode" class="social-icon" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Skills / Tools Section -->
+<section class="tools-section">
+    <div class="wrapper">
+        <div class="tools-scroll">
+            <div class="tools-track">
+                <span class="tool-tag"><i class="fa-brands fa-aws"></i> AWS</span>
+                <span class="tool-tag"><i class="fa-solid fa-bug"></i> Wazuh SIEM</span>
+                <span class="tool-tag"><i class="fa-solid fa-network-wired"></i> Nmap</span>
+                <span class="tool-tag"><i class="fa-solid fa-key"></i> Hydra</span>
+                <span class="tool-tag"><i class="fa-solid fa-spider"></i> Cowrie Honeypot</span>
+                <span class="tool-tag"><i class="fa-brands fa-linux"></i> Ubuntu / Kali Linux</span>
+                <span class="tool-tag"><i class="fa-solid fa-eye"></i> Wireshark</span>
+                <span class="tool-tag"><i class="fa-solid fa-box"></i> VirtualBox</span>
+                <span class="tool-tag"><i class="fa-solid fa-shield"></i> MITRE ATT&CK</span>
+                <span class="tool-tag"><i class="fa-solid fa-code"></i> ReactJS / TypeScript</span>
+                <!-- duplicate for seamless scroll -->
+                <span class="tool-tag"><i class="fa-brands fa-aws"></i> AWS</span>
+                <span class="tool-tag"><i class="fa-solid fa-bug"></i> Wazuh SIEM</span>
+                <span class="tool-tag"><i class="fa-solid fa-network-wired"></i> Nmap</span>
+                <span class="tool-tag"><i class="fa-solid fa-key"></i> Hydra</span>
+                <span class="tool-tag"><i class="fa-solid fa-spider"></i> Cowrie Honeypot</span>
+                <span class="tool-tag"><i class="fa-brands fa-linux"></i> Ubuntu / Kali Linux</span>
+                <span class="tool-tag"><i class="fa-solid fa-eye"></i> Wireshark</span>
+                <span class="tool-tag"><i class="fa-solid fa-box"></i> VirtualBox</span>
+                <span class="tool-tag"><i class="fa-solid fa-shield"></i> MITRE ATT&CK</span>
+                <span class="tool-tag"><i class="fa-solid fa-code"></i> ReactJS / TypeScript</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Labs / Projects Section -->
+<section class="projects" id="projects">
+    <div class="wrapper">
+        <div class="section-header">
+            <div class="section-label">// CYBER LABS</div>
+            <h2 class="section-title">Hands-On <span>Security</span> Labs</h2>
+            <p class="section-sub">Real-world experiments. Real attack data. Real learning.</p>
+        </div>
+
+        <div class="project-grid">
+            <!-- Lab 1: Honeypot -->
+            <div class="project-card lab-card">
+                <div class="card-header">
+                    <div class="card-badge">AWS · EC2 · SSH Honeypot</div>
+                    <div class="threat-level">
+                        <span class="threat-dot"></span>
+                        <span>LIVE THREAT DATA</span>
+                    </div>
+                </div>
+                <img src="images/honeypot.jpeg" alt="AWS Honeypot Deployment">
+                <div class="project-info">
+                    <h3>Cloud Honeypot — AWS SSH Trap</h3>
+                    <p>Deployed a Cowrie SSH honeypot on an Ubuntu EC2 instance. Without any public announcement, the first bot scanner found it in just <span class="highlight">31 minutes</span>. Two automated bots from Singapore and China probed the system using completely different toolkits.</p>
+
+                    <div class="lab-stats">
+                        <div class="lab-stat">
+                            <div class="lab-stat-val">13 min</div>
+                            <div class="lab-stat-label">Setup time</div>
+                        </div>
+                        <div class="lab-stat">
+                            <div class="lab-stat-val">31 min</div>
+                            <div class="lab-stat-label">First attacker</div>
+                        </div>
+                        <div class="lab-stat">
+                            <div class="lab-stat-val">2</div>
+                            <div class="lab-stat-label">Countries</div>
+                        </div>
                     </div>
 
-                    <div class="social">
-                        <a href="https://www.facebook.com/abrar.hanat" target="_blank">
-                            <i class="fa-brands fa-facebook"></i>
+                    <div class="tech-tags">
+                        <span>AWS EC2</span>
+                        <span>Cowrie</span>
+                        <span>Ubuntu</span>
+                        <span>SSH</span>
+                        <span>Threat Intel</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/Abruz18" target="_blank">
+                            <i class="fa-brands fa-github"></i> GitHub
                         </a>
                         <a href="https://www.linkedin.com/in/abrars18/" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-linkedin"></i> Write-up
                         </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lab 2: Home SOC -->
+            <div class="project-card lab-card">
+                <div class="card-header">
+                    <div class="card-badge">Wazuh · Kali · MITRE ATT&CK</div>
+                    <div class="threat-level alert">
+                        <span class="threat-dot red"></span>
+                        <span>1,565 ALERTS</span>
+                    </div>
+                </div>
+                <img src="images/soc-lab.jpeg" alt="Home SOC Lab">
+                <div class="project-info">
+                    <h3>Home SOC Lab — Brute Force Detection</h3>
+                    <p>Built a complete home SOC from scratch using VirtualBox. Used Kali Linux with Hydra and the rockyou wordlist (<span class="highlight">14M passwords</span>) to simulate a brute-force attack against a Windows 10 endpoint, all monitored live in Wazuh SIEM with MITRE ATT&CK mapping.</p>
+
+                    <div class="lab-stats">
+                        <div class="lab-stat">
+                            <div class="lab-stat-val">1,565</div>
+                            <div class="lab-stat-label">Total alerts</div>
+                        </div>
+                        <div class="lab-stat">
+                            <div class="lab-stat-val">632</div>
+                            <div class="lab-stat-label">Auth failures</div>
+                        </div>
+                        <div class="lab-stat">
+                            <div class="lab-stat-val">T1110</div>
+                            <div class="lab-stat-label">MITRE TTP</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-tags">
+                        <span>Wazuh</span>
+                        <span>Hydra</span>
+                        <span>Kali Linux</span>
+                        <span>MITRE ATT&CK</span>
+                        <span>VirtualBox</span>
+                    </div>
+
+                    <div class="project-links">
                         <a href="https://github.com/Abruz18" target="_blank">
-                            <i class="fa-brands fa-github"></i>
+                            <i class="fa-brands fa-github"></i> GitHub
                         </a>
-                        <a href="https://leetcode.com/u/Abrus18/" target="_blank">
-                            <img src="images/leetcode.svg" alt="LeetCode" class="social-icon" />
+                        <a href="https://www.linkedin.com/in/abrars18/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i> Write-up
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dev Project Card 1 -->
+            <div class="project-card">
+                <div class="card-header">
+                    <div class="card-badge">Python · Mediapipe · Pygame</div>
+                </div>
+                <img src="images/project1.png" alt="Hand Gesture Recognition">
+                <div class="project-info">
+                    <h3>Hand Gesture Recognition</h3>
+                    <p>A Python project using Mediapipe and Pygame to detect and classify hand gestures in real time using computer vision.</p>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>Mediapipe</span>
+                        <span>Pygame</span>
+                        <span>OpenCV</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Abruz18/Hand_gesture_recognition" target="_blank">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fa-solid fa-eye"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dev Project Card 2 -->
+            <div class="project-card">
+                <div class="card-header">
+                    <div class="card-badge">HTML · CSS · JavaScript</div>
+                </div>
+                <img src="images/project2.jpg" alt="Portfolio Website">
+                <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>My personal portfolio built with HTML, CSS, and JavaScript — the site you're on right now.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Abruz18/portfolio" target="_blank">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fa-solid fa-eye"></i> Live Demo
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="wrapper">
-            <h2 class="section-title">Projects</h2>
-            <div class="project-grid">
-                <!-- Project Card 1 -->
-                <div class="project-card">
-                    <img src="images/project1.png" alt="Project 1">
-                    <div class="project-info">
-                        <h3>Hang Gesture Recognition</h3>
-                        <p>A Python project using Mediapipe and Pygame to recognize hand gestures.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Abruz18/Hand_gesture_recognition" target="_blank">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                            <a href="#" target="_blank">
-                                <i class="fa-solid fa-eye"></i> Live Demo
-                            </a>
-                        </div>
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="wrapper">
+        <div class="section-header">
+            <div class="section-label">// ABOUT</div>
+            <h2 class="section-title">My <span>Profile</span></h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>I'm an IT professional currently providing support at <span class="highlight">Netflix Animation Studios</span>, working in one of the most dynamic production environments in the world. I'm actively transitioning into cyber security, building hands-on skills through self-directed labs and simulations.</p>
+                <p>Previously provided Level 2 IT support at <span class="highlight">James Cook University</span> and developed web platforms with ReactJS, TypeScript, and Google Cloud at <span class="highlight">Sample Assist</span>. I believe the best defenders understand how attackers think — so I'm learning both sides.</p>
+            </div>
+            <div class="about-certs">
+                <div class="cert-item">
+                    <i class="fa-solid fa-film"></i>
+                    <div>
+                        <div class="cert-title">Netflix Animation Studios</div>
+                        <div class="cert-sub">IT Support — Current</div>
                     </div>
                 </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card">
-                    <img src="images/project2.jpg" alt="Project 2">
-                    <div class="project-info">
-                        <h3>Portfolio Website</h3>
-                        <p>My personal portfolio website built with HTML, CSS, and JavaScript.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Abruz18/portfolio" target="_blank">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                            <a href="#" target="_blank">
-                                <i class="fa-solid fa-eye"></i> Live Demo
-                            </a>
-                        </div>
+                <div class="cert-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <div class="cert-title">James Cook University</div>
+                        <div class="cert-sub">IT Support (Level 2) — Previous</div>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <i class="fa-solid fa-code"></i>
+                    <div>
+                        <div class="cert-title">Sample Assist</div>
+                        <div class="cert-sub">Frontend Developer — ReactJS, TypeScript, GCP</div>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <div class="cert-title">Self-Directed Cyber Labs</div>
+                        <div class="cert-sub">Honeypot Deployment · Home SOC · SIEM</div>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <i class="fa-solid fa-crosshairs"></i>
+                    <div>
+                        <div class="cert-title">MITRE ATT&CK Framework</div>
+                        <div class="cert-sub">T1110 — Brute Force, Password Guessing, SSH</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="wrapper">
-            <h2 class="section-title">Contact Me</h2>
-            <p style="text-align:center;">You can reach me at <a href="mailto:abhasnat49@gmail.com">abhasnat49@gmail.com</a> or through my social media links above.</p>
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="wrapper">
+        <div class="section-header">
+            <div class="section-label">// CONTACT</div>
+            <h2 class="section-title">Get In <span>Touch</span></h2>
         </div>
-    </section>
+        <div class="contact-content">
+            <div class="terminal-window">
+                <div class="terminal-bar">
+                    <span class="t-dot red"></span>
+                    <span class="t-dot yellow"></span>
+                    <span class="t-dot green"></span>
+                    <span class="t-title">contact.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="t-line"><span class="t-prompt">$</span> <span class="t-text">echo "Open to SOC / Security roles"</span></div>
+                    <div class="t-line output">Open to SOC / Security roles</div>
+                    <div class="t-line"><span class="t-prompt">$</span> <span class="t-text">cat contact.txt</span></div>
+                    <div class="t-line output">Email: <a href="mailto:abhasnat49@gmail.com">abhasnat49@gmail.com</a></div>
+                    <div class="t-line output">LinkedIn: <a href="https://www.linkedin.com/in/abrars18/" target="_blank">linkedin.com/in/abrars18</a></div>
+                    <div class="t-line output">GitHub: <a href="https://github.com/Abruz18" target="_blank">github.com/Abruz18</a></div>
+                    <div class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-    <script>
-        // Navbar toggle
-        var togglebtn = document.querySelector(".togglebtn");
-        var nav = document.querySelector(".navlinks");
+<footer>
+    <div class="wrapper">
+        <p>Built by <span class="highlight">Abrar Hasnat Raiyan</span> · Aspiring Cyber Security Analyst</p>
+        <p class="footer-sub">// Stay curious. Stay secure.</p>
+    </div>
+</footer>
 
-        togglebtn.addEventListener("click", function () {
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        });
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+<script>
+// Navbar toggle
+var togglebtn = document.querySelector(".togglebtn");
+var nav = document.querySelector(".navlinks");
+togglebtn.addEventListener("click", function () {
+    this.classList.toggle("click");
+    nav.classList.toggle("open");
+});
 
-        // Typed.js animation
-        var typed = new Typed(".input", {
-            strings: ["Frontend Developer", " IT Support", "Web Developer"],
-            typeSpeed: 120,
-            backSpeed: 80,
-            backDelay: 1500,
-            loop: true
-        });
-    </script>
+// Typed.js
+var typed = new Typed(".input", {
+    strings: ["SOC Analyst", "Threat Hunter", "Pen Tester", "Security Engineer", "Blue Teamer"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    backDelay: 2000,
+    loop: true
+});
+
+// Particle canvas
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const particles = [];
+for (let i = 0; i < 60; i++) {
+    particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        r: Math.random() * 1.5 + 0.5,
+        alpha: Math.random() * 0.4 + 0.1
+    });
+}
+
+function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(26, 143, 255, ${p.alpha})`;
+        ctx.fill();
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    });
+
+    // Draw lines between close particles
+    for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = `rgba(26, 143, 255, ${0.08 * (1 - dist / 120)})`;
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+            }
+        }
+    }
+    requestAnimationFrame(drawParticles);
+}
+drawParticles();
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.project-card, .cert-item, .about-text').forEach(el => observer.observe(el));
+</script>
 </body>
-
 </html>
